@@ -24,6 +24,12 @@ import {Hero} from './Hero';
     height: 1.6em;
     border-radius: 4px;
   }
+  
+  .heroes li.selected {
+  background-color: #85b0c9 !important;
+  color: white;
+}
+  
   .heroes li.selected:hover {
     background-color: #BBD8DC !important;
     color: white;
@@ -57,7 +63,10 @@ import {Hero} from './Hero';
 <h1>{{title}}</h1>
 <h2>My Heroes</h2>
 <ul class="heroes">
-    <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+    <li *ngFor="let hero of heroes"
+        (click)="onSelect(hero)"
+        [class.selected]="hero === selectedHero">
+
         <span class="badge">{{hero.id}}</span>{{hero.name}}
     </li>        
 </ul>
@@ -80,19 +89,22 @@ export class AppComponent {
 
     selectedHero:Hero;
 
-    const heroes:Hero[] = [
-        {id: 11, name: 'Mr. Nice'},
-        {id: 12, name: 'Narco'},
-        {id: 13, name: 'Bombasto'},
-        {id: 14, name: 'Celeritas'},
-        {id: 15, name: 'Magneta'},
-        {id: 16, name: 'RubberMan'},
-        {id: 17, name: 'Dynama'},
-        {id: 18, name: 'Dr IQ'},
-        {id: 19, name: 'Magma'},
-        {id: 20, name: 'Tornado'}
-    ];
+    const heroes:Hero[] =
+        [
+            {id: 11, name: 'Mr. Nice'},
+            {id: 12, name: 'Narco'},
+            {id: 13, name: 'Bombasto'},
+            {id: 14, name: 'Celeritas'},
+            {id: 15, name: 'Magneta'},
+            {id: 16, name: 'RubberMan'},
+            {id: 17, name: 'Dynama'},
+            {id: 18, name: 'Dr IQ'},
+            {id: 19, name: 'Magma'},
+            {id: 20, name: 'Tornado'}
+        ];
 
+
+    //
     onSelect(hero:Hero) {
         this.selectedHero = hero;
         console.log(this.selectedHero);
