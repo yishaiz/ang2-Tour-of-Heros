@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
+        // const
         this.heroes = [
             { id: 11, name: 'Mr. Nice' },
             { id: 12, name: 'Narco' },
