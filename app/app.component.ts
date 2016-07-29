@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Hero} from './Hero';
+import {HeroDetailComponent} from './hero-detail.component';
 
 @Component({
     selector: 'my-app',
@@ -72,13 +73,16 @@ import {Hero} from './Hero';
 </ul>
 
 <div *ngIf="selectedHero">
-    <h2>{{selectedHero.name}} details!</h2>
-    <div>
-        <label>id: </label>{{selectedHero.id}}</div>
-        <div>
-        <label>name: </label>
-        <input [(ngModel)]="selectedHero.name"  placeholder="name"/>
-    </div>
+xxxxx
+    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+    
+    <!--<h2>{{selectedHero.name}} details!</h2>-->
+    <!--<div>-->
+        <!--<label>id: </label>{{selectedHero.id}}</div>-->
+        <!--<div>-->
+        <!--<label>name: </label>-->
+        <!--<input [(ngModel)]="selectedHero.name"  placeholder="name"/>-->
+    <!--</div>-->
 </div>
     
  
