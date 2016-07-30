@@ -73,7 +73,6 @@ import {HeroDetailComponent} from './hero-detail.component';
     </li>        
 </ul>
 
-<my-hero-detail [hero]="selectedHero"></my-hero-detail>
 
 <div *ngIf="selectedHero">
     <my-hero-detail [hero]="selectedHero"></my-hero-detail>
