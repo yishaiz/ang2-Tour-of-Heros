@@ -6,8 +6,6 @@ import {Hero} from './Hero';
     styles: [` 
 `],
     template: `
-
-test:
   <div *ngIf="hero">
     <h2>{{hero.name}} details!</h2>
     <div><label>id: </label>{{hero.id}}</div>

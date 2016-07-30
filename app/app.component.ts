@@ -4,6 +4,7 @@ import {HeroDetailComponent} from './hero-detail.component';
 
 @Component({
     selector: 'my-app',
+    directives:[HeroDetailComponent],
     styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -72,9 +73,15 @@ import {HeroDetailComponent} from './hero-detail.component';
     </li>        
 </ul>
 
+<my-hero-detail [hero]="selectedHero"></my-hero-detail>
+
 <div *ngIf="selectedHero">
-xxxxx
     <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+    <!--<h1>test from parent</h1>
+    <h2>{{selectedHero.name}}</h2>-->    
+</div>
+    
+    
     
     <!--<h2>{{selectedHero.name}} details!</h2>-->
     <!--<div>-->
@@ -83,8 +90,6 @@ xxxxx
         <!--<label>name: </label>-->
         <!--<input [(ngModel)]="selectedHero.name"  placeholder="name"/>-->
     <!--</div>-->
-</div>
-    
  
 `
 })
@@ -93,7 +98,8 @@ export class AppComponent {
 
     selectedHero:Hero;
 
-    const heroes:Hero[] =
+    //const
+    heroes:Hero[] =
         [
             {id: 11, name: 'Mr. Nice'},
             {id: 12, name: 'Narco'},
