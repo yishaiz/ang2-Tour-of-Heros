@@ -89,9 +89,13 @@ export class AppComponent {
 
     constructor( private heroesService: HeroService){
         // this.heroes = heroesService.getHeroes();
-        this.getHeroes();
+
     }
 
+    ngOnInit(){
+        this.getHeroes();
+    }
+    
     getHeroes(){
         // this.heroes = heroesService.getHeroes();
         this.heroesService.getHeroes().then(

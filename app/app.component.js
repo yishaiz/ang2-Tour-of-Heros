@@ -13,11 +13,13 @@ var hero_detail_component_1 = require('./hero-detail.component');
 var hero_service_1 = require('./hero.service');
 var AppComponent = (function () {
     function AppComponent(heroesService) {
+        // this.heroes = heroesService.getHeroes();
         this.heroesService = heroesService;
         this.title = 'Tour of Heroes';
-        // this.heroes = heroesService.getHeroes();
-        this.getHeroes();
     }
+    AppComponent.prototype.ngOnInit = function () {
+        this.getHeroes();
+    };
     AppComponent.prototype.getHeroes = function () {
         var _this = this;
         // this.heroes = heroesService.getHeroes();
