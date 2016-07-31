@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Hero} from './Hero';
 import {HeroDetailComponent} from './hero-detail.component';
+import { heroes} from './hero.service';
 
 @Component({
     selector: 'my-app',
@@ -65,7 +66,7 @@ import {HeroDetailComponent} from './hero-detail.component';
 <h1>{{title}}</h1>
 <h2>My Heroes</h2>
 <ul class="heroes">
-    <li *ngFor="let hero of heroes; trackBy:hero?.id"
+    <li *ngFor="let hero of heroesFromService; trackBy:hero?.id"
         (click)="onSelect(hero)"
         [class.selected]="hero === selectedHero">
 
@@ -97,8 +98,16 @@ export class AppComponent {
 
     selectedHero:Hero;
 
+
+    // heroes:Hero[];
+    heroesFromService:Hero[];
+
+    constructor( ){
+        this.heroesFromService= heroes;
+    }
+
     //const
-    heroes:Hero[] =
+/*    heroes:Hero[] =
         [
             {id: 11, name: 'Mr. Nice'},
             {id: 12, name: 'Narco'},
@@ -110,7 +119,7 @@ export class AppComponent {
             {id: 18, name: 'Dr IQ'},
             {id: 19, name: 'Magma'},
             {id: 20, name: 'Tornado'}
-        ];
+        ];*/
 
 
     //

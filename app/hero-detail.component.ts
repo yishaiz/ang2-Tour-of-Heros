@@ -17,5 +17,6 @@ import {Hero} from './Hero';
 `
 })
 export class HeroDetailComponent {
-    @Input() hero: Hero;
+    @Input()
+    hero: Hero;
 }
