@@ -5,8 +5,10 @@ import  {HEROES} from './mock-heroes';
 @Injectable()
 export class HeroService {
 
+    // console.log("heroes",HEROES);
+
     getHeroes() {
-        console.log("heroes",HEROES);
-        return HEROES;
+        // return HEROES;
+        return Promise.resolve(HEROES);
     }
 }

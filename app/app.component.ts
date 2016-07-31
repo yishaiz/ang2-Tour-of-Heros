@@ -88,8 +88,17 @@ export class AppComponent {
     heroes : Hero[];
 
     constructor( private heroesService: HeroService){
-        this.heroes = heroesService.getHeroes();
+        // this.heroes = heroesService.getHeroes();
+        this.getHeroes();
     }
+
+    getHeroes(){
+        // this.heroes = heroesService.getHeroes();
+        this.heroesService.getHeroes().then(
+            heroes => this.heroes = heroes
+        );
+    }
+
 
     onSelect(hero:Hero) {
         this.selectedHero = hero;

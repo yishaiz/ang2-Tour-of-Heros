@@ -15,8 +15,14 @@ var AppComponent = (function () {
     function AppComponent(heroesService) {
         this.heroesService = heroesService;
         this.title = 'Tour of Heroes';
-        this.heroes = heroesService.getHeroes();
+        // this.heroes = heroesService.getHeroes();
+        this.getHeroes();
     }
+    AppComponent.prototype.getHeroes = function () {
+        var _this = this;
+        // this.heroes = heroesService.getHeroes();
+        this.heroesService.getHeroes().then(function (heroes) { return _this.heroes = heroes; });
+    };
     AppComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
         console.log(this.selectedHero);

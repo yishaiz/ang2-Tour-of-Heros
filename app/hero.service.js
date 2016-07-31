@@ -13,9 +13,10 @@ var mock_heroes_1 = require('./mock-heroes');
 var HeroService = (function () {
     function HeroService() {
     }
+    // console.log("heroes",HEROES);
     HeroService.prototype.getHeroes = function () {
-        console.log("heroes", mock_heroes_1.HEROES);
-        return mock_heroes_1.HEROES;
+        // return HEROES;
+        return Promise.resolve(mock_heroes_1.HEROES);
     };
     HeroService = __decorate([
         core_1.Injectable(), 
