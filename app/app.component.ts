@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
-import {Hero} from './Hero';
-import {HeroDetailComponent} from './hero-detail.component';
-import {HeroService} from './hero.service';
+// import {Hero} from './Hero';
+// import {HeroDetailComponent} from './hero-detail.component';
+// import {HeroService} from './hero.service';
+import {HeroesComponent } from './heroes.component';
 
 @Component({
     selector: 'my-app',
-    directives:[HeroDetailComponent],
-    providers:[HeroService],
+    directives:[HeroesComponent ],
     styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -63,51 +63,19 @@ import {HeroService} from './hero.service';
   }
 `],
     template: `
+ 
     
-<h1>{{title}}</h1>
-<h2>My Heroes</h2>
-<ul class="heroes">
-    <li *ngFor="let hero of heroes; trackBy:hero?.id"
-        (click)="onSelect(hero)"
-        [class.selected]="hero === selectedHero">
-
-        <span class="badge">{{hero.id}}</span>{{hero.name}}
-    </li>        
-</ul>
-
-<div *ngIf="selectedHero">
-    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-</div>
+    <h3>use heroes component</h3>
+     <my-heroes></my-heroes> 
+ 
 `
 })
 export class AppComponent {
-    title = 'Tour of Heroes';
 
-    selectedHero:Hero;
-
-    heroes : Hero[];
-
-    constructor( private heroesService: HeroService){
-        // this.heroes = heroesService.getHeroes();
-
-    }
 
     ngOnInit(){
-        this.getHeroes();
+        // this.getHeroes();
     }
 
-    getHeroes(){
-        // this.heroes = heroesService.getHeroes();
-        // this.heroesService.getHeroes().then(
-        this.heroesService.getHeroes().then(
-                heroes => this.heroes = heroes
-        );
-    }
-
-
-    onSelect(hero:Hero) {
-        this.selectedHero = hero;
-        console.log(this.selectedHero);
-    }
 
 }
