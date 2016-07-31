@@ -1,7 +1,4 @@
 import {Component} from '@angular/core';
-// import {Hero} from './Hero';
-// import {HeroDetailComponent} from './hero-detail.component';
-// import {HeroService} from './hero.service';
 import {HeroesComponent } from './heroes.component';
 
 @Component({
@@ -64,13 +61,14 @@ import {HeroesComponent } from './heroes.component';
 `],
     template: `
  
-    
-    <h3>use heroes component</h3>
+    <h1>{{title}}</h1>
+    <!--<h3>use heroes component</h3>-->
      <my-heroes></my-heroes> 
  
 `
 })
 export class AppComponent {
+    title = 'Tour of Heroes';
 
 
     ngOnInit(){
