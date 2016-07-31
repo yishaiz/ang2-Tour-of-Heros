@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 // import  {HEROES} from './mock-heroes';
+//this comment cause nothing is being displayed !!!
 /*
  export const heroes: Hero[] =
  [
@@ -23,9 +24,10 @@ var core_1 = require('@angular/core');
  {id: 18, name: 'Dr IQ'},
  {id: 19, name: 'Magma'},
  {id: 20, name: 'Tornado'}
- ];*/
-var HeroService = (function () {
-    function HeroService() {
+ ];
+ */
+var Hero2Service = (function () {
+    function Hero2Service() {
         this.HEROES1 = [
             { id: 11, name: 'Mr. Nice' },
             { id: 12, name: 'Narco' },
@@ -39,16 +41,15 @@ var HeroService = (function () {
             { id: 20, name: 'Tornado' }
         ];
     }
-    HeroService.prototype.getHeroes = function () {
+    Hero2Service.prototype.getHeroes = function () {
         console.log("heroes", this.HEROES1);
         return this.HEROES1;
-        // return HEROES;
     };
-    HeroService = __decorate([
+    Hero2Service = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], HeroService);
-    return HeroService;
+    ], Hero2Service);
+    return Hero2Service;
 }());
-exports.HeroService = HeroService;
-//# sourceMappingURL=hero.service.js.map
+exports.Hero2Service = Hero2Service;
+//# sourceMappingURL=hero2.service.js.map

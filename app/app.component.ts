@@ -1,11 +1,14 @@
 import {Component} from '@angular/core';
 import {Hero} from './Hero';
 import {HeroDetailComponent} from './hero-detail.component';
-import { heroes} from './hero.service';
+import {  HeroService} from './hero.service';
+import {  Hero2Service} from './hero2.service';
 
 @Component({
     selector: 'my-app',
     directives:[HeroDetailComponent],
+    // providers:[HeroService],
+    providers:[Hero2Service],
     styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -66,7 +69,7 @@ import { heroes} from './hero.service';
 <h1>{{title}}</h1>
 <h2>My Heroes</h2>
 <ul class="heroes">
-    <li *ngFor="let hero of heroesFromService; trackBy:hero?.id"
+    <li *ngFor="let hero of heroes; trackBy:hero?.id"
         (click)="onSelect(hero)"
         [class.selected]="hero === selectedHero">
 
@@ -80,17 +83,6 @@ import { heroes} from './hero.service';
     <!--<h1>test from parent</h1>
     <h2>{{selectedHero.name}}</h2>-->    
 </div>
-    
-    
-    
-    <!--<h2>{{selectedHero.name}} details!</h2>-->
-    <!--<div>-->
-        <!--<label>id: </label>{{selectedHero.id}}</div>-->
-        <!--<div>-->
-        <!--<label>name: </label>-->
-        <!--<input [(ngModel)]="selectedHero.name"  placeholder="name"/>-->
-    <!--</div>-->
- 
 `
 })
 export class AppComponent {
@@ -100,14 +92,16 @@ export class AppComponent {
 
 
     // heroes:Hero[];
-    heroesFromService:Hero[];
+// /**/    heroes : Hero[];
+/*
 
-    constructor( ){
-        this.heroesFromService= heroes;
+    constructor( private heroesService: HeroService){
+        this.heroes = heroesService.getHeroes();
     }
+*/
 
     //const
-/*    heroes:Hero[] =
+    heroes:Hero[] =
         [
             {id: 11, name: 'Mr. Nice'},
             {id: 12, name: 'Narco'},
@@ -119,7 +113,7 @@ export class AppComponent {
             {id: 18, name: 'Dr IQ'},
             {id: 19, name: 'Magma'},
             {id: 20, name: 'Tornado'}
-        ];*/
+        ];
 
 
     //

@@ -2,6 +2,8 @@ import  {Injectable} from '@angular/core';
 import  {Hero} from './Hero';
 // import  {HEROES} from './mock-heroes';
 
+
+//this comment cause nothing is being displayed !!!
 /*
  export const heroes: Hero[] =
  [
@@ -15,10 +17,11 @@ import  {Hero} from './Hero';
  {id: 18, name: 'Dr IQ'},
  {id: 19, name: 'Magma'},
  {id: 20, name: 'Tornado'}
- ];*/
+ ];
+ */
 
 @Injectable()
-export class HeroService {
+export class Hero2Service {
 
     HEROES1: Hero[] =
         [
@@ -37,6 +40,5 @@ export class HeroService {
     getHeroes() {
         console.log("heroes",this.HEROES1);
         return this.HEROES1;
-        // return HEROES;
     }
 }
