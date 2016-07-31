@@ -99,7 +99,7 @@ export class AppComponent {
     getHeroes(){
         // this.heroes = heroesService.getHeroes();
         // this.heroesService.getHeroes().then(
-        this.heroesService.getHeroesSlowly().then(
+        this.heroesService.getHeroes().then(
                 heroes => this.heroes = heroes
         );
     }
