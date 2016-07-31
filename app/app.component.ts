@@ -1,9 +1,14 @@
 import {Component} from '@angular/core';
-import {HeroesComponent } from './heroes.component';
+
+import {HeroesComponent} from './heroes.component';
+import {DashboardComponent} from './dashboard.component';
+import {HeroService} from './hero.service';
+
+import {ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
     selector: 'my-app',
-    directives:[HeroesComponent ],
+    directives: [ROUTER_DIRECTIVES, HeroesComponent, DashboardComponent],
     styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -59,21 +64,30 @@ import {HeroesComponent } from './heroes.component';
     border-radius: 4px 0 0 4px;
   }
 `],
+    providers: [HeroService],
+
     template: `
- 
-    <h1>{{title}}</h1>
-    <!--<h3>use heroes component</h3>-->
-     <my-heroes></my-heroes> 
- 
+
+<h1>{{title}}</h1>
+
+<h2>Component Router</h2>
+<nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+    <a routerLink="/hero/13" routerLinkActive="active">Specific Hero</a>
+    <a routerLink="/xxxx" routerLinkActive="active">Not found page</a>
+</nav>
+
+<!-- Routed views go here -->
+<router-outlet></router-outlet>
+   
 `
 })
 export class AppComponent {
     title = 'Tour of Heroes';
 
-
-    ngOnInit(){
+    ngOnInit() {
         // this.getHeroes();
     }
-
 
 }

@@ -9,23 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_heroes_1 = require('./mock-heroes');
-var HeroService = (function () {
-    function HeroService() {
+var PageNotFoundComponent = (function () {
+    function PageNotFoundComponent() {
     }
-    HeroService.prototype.getHeroes = function () {
-        // return HEROES;
-        return Promise.resolve(mock_heroes_1.HEROES);
-    };
-    HeroService.prototype.getHeroesSlowly = function () {
-        // return Promise.resolve(HEROES);
-        return new Promise(function (resolve) { return setTimeout(function () { return resolve(mock_heroes_1.HEROES); }, 2000); });
-    };
-    HeroService = __decorate([
-        core_1.Injectable(), 
+    PageNotFoundComponent = __decorate([
+        core_1.Component({
+            selector: 'page-not-found',
+            styles: ["\n        h1{\n            color:red;\n        }\n        \n        img{\n            width:200px\n        }\n        \n"
+            ],
+            template: "\n \n    <h1>Page not found !</h1>\n\n    <img src=\"../images/sad.gif\"/>\n    <img src=\"../images/girl-with-yellow-sad-smiley-balloon-32716672.jpg\"/>\n    <img src=\"../images/poop-emoji-emoticon-600-300x300.jpg\"/>\n     \n\n"
+        }), 
         __metadata('design:paramtypes', [])
-    ], HeroService);
-    return HeroService;
+    ], PageNotFoundComponent);
+    return PageNotFoundComponent;
 }());
-exports.HeroService = HeroService;
-//# sourceMappingURL=hero.service.js.map
+exports.PageNotFoundComponent = PageNotFoundComponent;
+//# sourceMappingURL=page-not-found.component.js.map
