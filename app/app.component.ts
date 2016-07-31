@@ -95,11 +95,12 @@ export class AppComponent {
     ngOnInit(){
         this.getHeroes();
     }
-    
+
     getHeroes(){
         // this.heroes = heroesService.getHeroes();
-        this.heroesService.getHeroes().then(
-            heroes => this.heroes = heroes
+        // this.heroesService.getHeroes().then(
+        this.heroesService.getHeroesSlowly().then(
+                heroes => this.heroes = heroes
         );
     }
 
