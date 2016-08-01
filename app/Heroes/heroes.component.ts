@@ -6,6 +6,7 @@ import {HeroService} from './hero.service';
 @Component({
     selector: 'my-heroes',
     directives:[HeroDetailComponent],
+    providers:[HeroService],
     styles: [`
   .selected {
     background-color: #CFD8DC !important;
