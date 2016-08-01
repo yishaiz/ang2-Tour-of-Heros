@@ -6,7 +6,7 @@ import {HeroService} from "./hero.service";
 
 @Component({
     selector: 'my-hero-detail',
-    providers:[HeroService],
+    providers: [HeroService],
     styles: [` 
 `],
     template: `
@@ -20,47 +20,52 @@ import {HeroService} from "./hero.service";
   </div>
 `
 })
-export class HeroDetailComponent implements OnInit, OnDestroy   {
- /*   @Input()*/
-    hero: Hero;
 
+export class HeroDetailComponent implements OnInit{
+//, OnDestroy
+    hero:Hero;
 
+    private subscriber:any;
 
-
-    private subscriber: any;
-
-    constructor(
-        private route: ActivatedRoute,
-        private router:  Router,
-        private service:  HeroService){
-
+    constructor(private route:ActivatedRoute,
+                private router:Router,
+                private service:HeroService) {
     }
 
+    ngOnInit() {
+        let id = +this.route.snapshot.params['id'];
 
-
-    ngOnInit(){
-        this.subscriber = this.route.params.subscribe(
-            params => {
-                let id = +params['id'];  // (+) converts string 'id' to a number
-                console.log('id', id);
-                this.hero=null;
-                this.service.getHero(id).then(
-                    // debugger;
-                    hero => {
-                        this.hero=hero;
-                        console.log("her = ", this.hero);
-                        console.dir(hero);
-                    }
-
-                )
-            }
+        this.service.getHero(id).then(
+            hero => this.hero = hero
         );
-
     }
 
-    ngOnDestroy(){
-        console.log('destroy');
+    /*
+     ngOnInit(){
+     this.subscriber = this.route.params.subscribe(
+     params => {
+     let id = +params['id'];  // (+) converts string 'id' to a number
+     console.log('id', id);
+     this.hero=null;
+     this.service.getHero(id).then(
+     // debugger;
+     hero => {
+     this.hero=hero;
+     console.log("her = ", this.hero);
+     console.dir(hero);
+     }
 
-        this.subscriber.unsubscribe();
-    }
+     )
+     }
+     );
+
+     }
+
+     ngOnDestroy(){
+     console.log('destroy');
+
+     this.subscriber.unsubscribe();
+     }
+     */
+
 }

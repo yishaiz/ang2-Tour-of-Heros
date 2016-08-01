@@ -19,22 +19,8 @@ var HeroDetailComponent = (function () {
     }
     HeroDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.subscriber = this.route.params.subscribe(function (params) {
-            var id = +params['id']; // (+) converts string 'id' to a number
-            console.log('id', id);
-            _this.hero = null;
-            _this.service.getHero(id).then(
-            // debugger;
-            function (hero) {
-                _this.hero = hero;
-                console.log("her = ", _this.hero);
-                console.dir(hero);
-            });
-        });
-    };
-    HeroDetailComponent.prototype.ngOnDestroy = function () {
-        console.log('destroy');
-        this.subscriber.unsubscribe();
+        var id = +this.route.snapshot.params['id'];
+        this.service.getHero(id).then(function (hero) { return _this.hero = hero; });
     };
     HeroDetailComponent = __decorate([
         core_1.Component({

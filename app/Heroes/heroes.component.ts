@@ -7,8 +7,8 @@ import {Router} from '@angular/router';
 
 @Component({
     selector: 'my-heroes',
-    directives:[HeroDetailComponent],
-    providers:[HeroService],
+    directives: [HeroDetailComponent],
+    providers: [HeroService],
     styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -70,49 +70,36 @@ import {Router} from '@angular/router';
 <ul class="heroes">
     <li *ngFor="let hero of heroes; trackBy:hero?.id"
         (click)="onSelect(hero)">
-        
-        <!--[class.selected]="hero === selectedHero"-->
-
+         
         <span class="badge">{{hero.id}}</span>{{hero.name}}
     </li>        
 </ul>
-
-<!--
-<div *ngIf="selectedHero">
-    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-</div>
--->
-
+ 
 
 `
 })
-export class HeroesComponent implements  OnInit{
+export class HeroesComponent implements OnInit {
 
-    // selectedHero:Hero;
+    heroes:Hero[];
 
-    heroes : Hero[];
-
-    // constructor(private heroesService: HeroService){
-    constructor(private router: Router,  private heroesService: HeroService){
+    constructor(private router:Router, private heroesService:HeroService) {
 
     }
 
-    ngOnInit(){
+    ngOnInit() {
         this.getHeroes();
     }
 
-    getHeroes(){
+    getHeroes() {
         this.heroesService.getHeroes().then(
             heroes => this.heroes = heroes
         );
     }
 
     onSelect(hero:Hero) {
-        // this.selectedHero = hero;
         console.log(hero);
 
-        this.router.navigate(['/hero',hero.id]);
-
+        this.router.navigate(['/hero', hero.id]);
     }
 
 }
