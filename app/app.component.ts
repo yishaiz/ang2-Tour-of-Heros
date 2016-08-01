@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 
-import {HeroesComponent} from './heroes.component';
+import {HeroesComponent} from './Heroes/heroes.component';
 import {DashboardComponent} from './dashboard.component';
-import {HeroService} from './hero.service';
+import {HeroService} from './Heroes/hero.service';
 
 import {ROUTER_DIRECTIVES } from '@angular/router';
 

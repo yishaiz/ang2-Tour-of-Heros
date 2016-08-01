@@ -1,6 +1,6 @@
-import {HeroesComponent} from './heroes.component';
+import {HeroesComponent} from './Heroes/heroes.component';
 import {DashboardComponent} from './dashboard.component';
-import {HeroDetailComponent} from './hero-detail.component';
+import {HeroDetailComponent} from './Heroes/hero-detail.component';
 import { PageNotFoundComponent} from './page-not-found.component';
 
 import {provideRouter, RouterConfig} from '@angular/router';

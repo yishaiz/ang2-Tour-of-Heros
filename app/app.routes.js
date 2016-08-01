@@ -1,7 +1,7 @@
 "use strict";
-var heroes_component_1 = require('./heroes.component');
+var heroes_component_1 = require('./Heroes/heroes.component');
 var dashboard_component_1 = require('./dashboard.component');
-var hero_detail_component_1 = require('./hero-detail.component');
+var hero_detail_component_1 = require('./Heroes/hero-detail.component');
 var page_not_found_component_1 = require('./page-not-found.component');
 var router_1 = require('@angular/router');
 // import { ROUTER_DIRECTIVES} from '@angular/router';
