@@ -3,6 +3,8 @@ import {Hero} from './Hero';
 import {HeroDetailComponent} from './hero-detail.component';
 import {HeroService} from './hero.service';
 
+import {Router} from '@angular/router';
+
 @Component({
     selector: 'my-heroes',
     directives:[HeroDetailComponent],
@@ -67,25 +69,32 @@ import {HeroService} from './hero.service';
 <h2>My Heroes</h2>
 <ul class="heroes">
     <li *ngFor="let hero of heroes; trackBy:hero?.id"
-        (click)="onSelect(hero)"
-        [class.selected]="hero === selectedHero">
+        (click)="onSelect(hero)">
+        
+        <!--[class.selected]="hero === selectedHero"-->
 
         <span class="badge">{{hero.id}}</span>{{hero.name}}
     </li>        
 </ul>
 
+<!--
 <div *ngIf="selectedHero">
     <my-hero-detail [hero]="selectedHero"></my-hero-detail>
 </div>
+-->
+
+
 `
 })
 export class HeroesComponent implements  OnInit{
 
-    selectedHero:Hero;
+    // selectedHero:Hero;
 
     heroes : Hero[];
 
-    constructor(private heroesService: HeroService){
+    // constructor(private heroesService: HeroService){
+    constructor(private router: Router,  private heroesService: HeroService){
+
     }
 
     ngOnInit(){
@@ -99,8 +108,11 @@ export class HeroesComponent implements  OnInit{
     }
 
     onSelect(hero:Hero) {
-        this.selectedHero = hero;
-        console.log(this.selectedHero);
+        // this.selectedHero = hero;
+        console.log(hero);
+
+        this.router.navigate(['/hero',hero.id]);
+
     }
 
 }
