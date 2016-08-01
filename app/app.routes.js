@@ -1,20 +1,27 @@
 "use strict";
-var heroes_component_1 = require('./Heroes/heroes.component');
 var dashboard_component_1 = require('./dashboard.component');
-var hero_detail_component_1 = require('./Heroes/hero-detail.component');
 var page_not_found_component_1 = require('./page-not-found.component');
-var movies_list_1 = require('./movies/movies-list');
-var about_movies_1 = require('./movies/about-movies');
 var router_1 = require('@angular/router');
+var heroes_routes_1 = require('./heroes/heroes.routes');
+var movies_routes_1 = require('./movies/movies.routes');
 // import { ROUTER_DIRECTIVES} from '@angular/router';
 var routes = [
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
-    { path: 'heroes', component: heroes_component_1.HeroesComponent },
-    { path: 'hero/:id', component: hero_detail_component_1.HeroDetailComponent },
-    { path: 'movies', component: movies_list_1.MoviesList },
-    { path: 'movies/about', component: about_movies_1.AboutMovies },
+    { path: 'dashboard', component: dashboard_component_1.DashboardComponent }
+].concat(heroes_routes_1.heroesRoutes, movies_routes_1.moviesRoutes, [
     { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
+]);
+/*
+
+const routes:RouterConfig = [
+    {path: 'dashboard', component: DashboardComponent},
+    {path: 'heroes', component: HeroesComponent},
+    {path: 'hero/:id', component: HeroDetailComponent},
+    {path: 'movies', component: MoviesList},
+    {path: 'movies/about', component: AboutMovies},
+    {path: '**', component: PageNotFoundComponent}
 ];
+
+*/
 exports.appRouterProviders = [
     router_1.provideRouter(routes)
 ];

@@ -7,7 +7,19 @@ import {AboutMovies} from './movies/about-movies';
 
 import {provideRouter, RouterConfig} from '@angular/router';
 
+import { heroesRoutes} from './heroes/heroes.routes';
+import { moviesRoutes} from './movies/movies.routes';
+
+
 // import { ROUTER_DIRECTIVES} from '@angular/router';
+
+const routes:RouterConfig = [
+    {path: 'dashboard', component: DashboardComponent},
+    ...heroesRoutes,
+    ...moviesRoutes,
+    {path: '**', component: PageNotFoundComponent}
+];
+/*
 
 const routes:RouterConfig = [
     {path: 'dashboard', component: DashboardComponent},
@@ -18,6 +30,7 @@ const routes:RouterConfig = [
     {path: '**', component: PageNotFoundComponent}
 ];
 
+*/
 export const appRouterProviders = [
     provideRouter(routes)
 ];
