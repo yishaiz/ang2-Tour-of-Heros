@@ -6,9 +6,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Heroes/hero-detail.component.js" afterPath="$PROJECT_DIR$/app/Heroes/hero-detail.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Heroes/hero-detail.component.js.map" afterPath="$PROJECT_DIR$/app/Heroes/hero-detail.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Heroes/hero-detail.component.ts" afterPath="$PROJECT_DIR$/app/Heroes/hero-detail.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Heroes/heroes.component.js" afterPath="$PROJECT_DIR$/app/Heroes/heroes.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Heroes/heroes.component.js.map" afterPath="$PROJECT_DIR$/app/Heroes/heroes.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Heroes/heroes.component.ts" afterPath="$PROJECT_DIR$/app/Heroes/heroes.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page-not-found.component.js" afterPath="$PROJECT_DIR$/app/page-not-found.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page-not-found.component.js.map" afterPath="$PROJECT_DIR$/app/page-not-found.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page-not-found.component.ts" afterPath="$PROJECT_DIR$/app/page-not-found.component.ts" />
     </list>
     <ignored path="Tour-of-heros.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,12 +34,24 @@
       <file leaf-file-name="hero-detail.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Heroes/hero-detail.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="348">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="72" selection-end-column="5" />
               <folding>
                 <element signature="e#0#66#0" expanded="true" />
-                <marker date="1470055908943" expanded="true" signature="328:526" ph="..." />
-                <marker date="1470055908943" expanded="true" signature="420:517" ph="..." />
+                <marker date="1470056489504" expanded="true" signature="363:561" ph="..." />
+                <marker date="1470056489504" expanded="true" signature="455:552" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hero.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Heroes/hero.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,11 +69,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="542">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="heroes.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Heroes/heroes.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+            <state relative-caret-position="876">
+              <caret line="63" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
                 <marker date="1470055588627" expanded="true" signature="361:426" ph="{...}" />
@@ -115,15 +137,15 @@
         <option value="$PROJECT_DIR$/app/main.ts" />
         <option value="$PROJECT_DIR$/app/hero.service.ts" />
         <option value="$PROJECT_DIR$/app/heroes.component.ts" />
-        <option value="$PROJECT_DIR$/app/page-not-found.component.ts" />
         <option value="$PROJECT_DIR$/app/movies/about-movies.ts" />
         <option value="$PROJECT_DIR$/app/movies/movies.ts" />
         <option value="$PROJECT_DIR$/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/Heroes/heroes.routes.ts" />
         <option value="$PROJECT_DIR$/app/movies/movies.routes.ts" />
         <option value="$PROJECT_DIR$/app/app.routes.ts" />
         <option value="$PROJECT_DIR$/app/Heroes/heroes.component.ts" />
+        <option value="$PROJECT_DIR$/app/page-not-found.component.ts" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/Heroes/hero-detail.component.ts" />
       </list>
     </option>
@@ -307,7 +329,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="SearchEverywhereHistoryKey" value="providers:&#9;null&#9;null&#10;use heroes co&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="padding&#9;FILE&#9;file://D:/Projects/ang2-Tour-of-Heros/Tour-of-heros/node_modules/lodash/_createPadding.js&#10;providers:&#9;null&#9;null&#10;use heroes co&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -399,12 +421,12 @@
       <workItem from="1469970119486" duration="3000" />
       <workItem from="1470029681735" duration="6467000" />
       <workItem from="1470037443914" duration="926000" />
-      <workItem from="1470054269545" duration="965000" />
+      <workItem from="1470054269545" duration="1591000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41844000" />
+    <option name="totallyTimeSpent" value="42470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1050" extended-state="6" />
@@ -444,13 +466,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Heroes/Hero.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -484,8 +499,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#66#0" expanded="true" />
-            <marker date="1470055908943" expanded="true" signature="328:526" ph="..." />
-            <marker date="1470055908943" expanded="true" signature="420:517" ph="..." />
+            <marker date="1470056489504" expanded="true" signature="363:561" ph="..." />
+            <marker date="1470056489504" expanded="true" signature="455:552" ph="..." />
           </folding>
         </state>
       </provider>
@@ -530,8 +545,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#66#0" expanded="true" />
-            <marker date="1470055908943" expanded="true" signature="328:526" ph="..." />
-            <marker date="1470055908943" expanded="true" signature="420:517" ph="..." />
+            <marker date="1470056489504" expanded="true" signature="363:561" ph="..." />
+            <marker date="1470056489504" expanded="true" signature="455:552" ph="..." />
           </folding>
         </state>
       </provider>
@@ -737,14 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/movies/movies.routes.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -760,17 +767,6 @@
         <state relative-caret-position="199">
           <caret line="194" column="13" selection-start-line="194" selection-start-column="13" selection-end-line="194" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/page-not-found.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding>
-            <marker date="1470031149326" expanded="true" signature="112:146" ph="{...}" />
-            <marker date="1470031149326" expanded="true" signature="167:223" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -811,20 +807,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Heroes/hero.service.ts">
+    <entry file="file://$PROJECT_DIR$/app/Heroes/mock-heroes.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/lodash/_createPadding.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Heroes/heroes.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Heroes/heroes.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        <state relative-caret-position="876">
+          <caret line="63" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
             <marker date="1470055588627" expanded="true" signature="361:426" ph="{...}" />
@@ -841,32 +853,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Heroes/heroes.routes.ts">
+    <entry file="file://$PROJECT_DIR$/app/Heroes/hero.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="287">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Heroes/mock-heroes.ts">
+    <entry file="file://$PROJECT_DIR$/app/page-not-found.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state relative-caret-position="110">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding>
+            <marker date="1470056507087" expanded="true" signature="112:146" ph="{...}" />
+            <marker date="1470056507087" expanded="true" signature="167:216" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Heroes/hero-detail.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="348">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="72" selection-end-column="5" />
           <folding>
             <element signature="e#0#66#0" expanded="true" />
-            <marker date="1470055908943" expanded="true" signature="328:526" ph="..." />
-            <marker date="1470055908943" expanded="true" signature="420:517" ph="..." />
+            <marker date="1470056489504" expanded="true" signature="363:561" ph="..." />
+            <marker date="1470056489504" expanded="true" signature="455:552" ph="..." />
           </folding>
         </state>
       </provider>

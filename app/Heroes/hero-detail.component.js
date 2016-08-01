@@ -17,17 +17,41 @@ var HeroDetailComponent = (function () {
         this.router = router;
         this.service = service;
     }
+    /*    // ngOnInit() {
+        //     let id = +this.route.snapshot.params['id'];
+        //
+        //     this.service.getHero(id).then(
+        //         hero => this.hero = hero
+        //     );
+        // }*/
     HeroDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var id = +this.route.snapshot.params['id'];
-        this.service.getHero(id).then(function (hero) { return _this.hero = hero; });
+        this.subscriber = this.route.params.subscribe(function (params) {
+            var id = +params['id']; // (+) converts string 'id' to a number
+            console.log('id', id);
+            _this.hero = null;
+            _this.service.getHero(id).then(
+            // debugger;
+            function (hero) {
+                _this.hero = hero;
+                console.log("her = ", _this.hero);
+                console.dir(hero);
+            });
+        });
+    };
+    HeroDetailComponent.prototype.ngOnDestroy = function () {
+        console.log('destroy');
+        this.subscriber.unsubscribe();
+    };
+    HeroDetailComponent.prototype.returnToHeroesList = function () {
+        this.router.navigate(['/heroes']);
     };
     HeroDetailComponent = __decorate([
         core_1.Component({
             selector: 'my-hero-detail',
             providers: [hero_service_1.HeroService],
-            styles: [" \n"],
-            template: "\n  <div *ngIf=\"hero\">\n    <h2>{{hero.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n    </div>\n  </div>\n"
+            styles: [" \n         button{margin-top: 40px;}\n"],
+            template: "\n  <div *ngIf=\"hero\">\n    <h2>{{hero.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n    </div>\n  </div>\n  \n  <button (click) = \"returnToHeroesList()\">Return to Heroes</button>\n"
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, hero_service_1.HeroService])
     ], HeroDetailComponent);

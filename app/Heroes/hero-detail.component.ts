@@ -8,6 +8,7 @@ import {HeroService} from "./hero.service";
     selector: 'my-hero-detail',
     providers: [HeroService],
     styles: [` 
+         button{margin-top: 40px;}
 `],
     template: `
   <div *ngIf="hero">
@@ -18,11 +19,13 @@ import {HeroService} from "./hero.service";
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </div>
   </div>
+  
+  <button (click) = "returnToHeroesList()">Return to Heroes</button>
 `
 })
 
-export class HeroDetailComponent implements OnInit{
-//, OnDestroy
+export class HeroDetailComponent implements OnInit , OnDestroy{
+
     hero:Hero;
 
     private subscriber:any;
@@ -32,40 +35,41 @@ export class HeroDetailComponent implements OnInit{
                 private service:HeroService) {
     }
 
-    ngOnInit() {
-        let id = +this.route.snapshot.params['id'];
+/*    // ngOnInit() {
+    //     let id = +this.route.snapshot.params['id'];
+    //
+    //     this.service.getHero(id).then(
+    //         hero => this.hero = hero
+    //     );
+    // }*/
 
-        this.service.getHero(id).then(
-            hero => this.hero = hero
+    ngOnInit() {
+        this.subscriber = this.route.params.subscribe(
+            params => {
+                let id = +params['id'];  // (+) converts string 'id' to a number
+                console.log('id', id);
+                this.hero = null;
+                this.service.getHero(id).then(
+                    // debugger;
+                    hero => {
+                        this.hero = hero;
+                        console.log("her = ", this.hero);
+                        console.dir(hero);
+                    }
+                )
+            }
         );
+
     }
 
-    /*
-     ngOnInit(){
-     this.subscriber = this.route.params.subscribe(
-     params => {
-     let id = +params['id'];  // (+) converts string 'id' to a number
-     console.log('id', id);
-     this.hero=null;
-     this.service.getHero(id).then(
-     // debugger;
-     hero => {
-     this.hero=hero;
-     console.log("her = ", this.hero);
-     console.dir(hero);
-     }
+    ngOnDestroy() {
+        console.log('destroy');
 
-     )
-     }
-     );
+        this.subscriber.unsubscribe();
+    }
 
-     }
-
-     ngOnDestroy(){
-     console.log('destroy');
-
-     this.subscriber.unsubscribe();
-     }
-     */
+    returnToHeroesList(){
+        this.router.navigate(['/heroes']);
+    }
 
 }
