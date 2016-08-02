@@ -1,1 +1,1 @@
-{"version":3,"file":"admin.routes.js","sourceRoot":"","sources":["admin.routes.ts"],"names":[],"mappings":";AAEA,gCAA+B,mBAAmB,CAAC,CAAA;AAGtC,mBAAW,GAAgB;IACpC,EAAC,IAAI,EAAE,OAAO,EAAE,SAAS,EAAE,gCAAc,EAAC;CAC7C,CAAC"}
+{"version":3,"file":"admin.routes.js","sourceRoot":"","sources":["admin.routes.ts"],"names":[],"mappings":";AACA,gCAA+B,mBAAmB,CAAC,CAAA;AAEnD,mCAAwB,uBAAuB,CAAC,CAAA;AAGhD,eAAe;AACf,4BAA4B;AAC5B,KAAK;AAEQ,mBAAW,GAAgB;IACpC;QACI,IAAI,EAAE,OAAO;QACb,SAAS,EAAE,gCAAc;QACzB,WAAW,EAAE,CAAC,8BAAS,CAAC;KAC3B;CACJ,CAAC"}
