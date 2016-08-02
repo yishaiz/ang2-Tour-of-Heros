@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var MoviesList = (function () {
-    function MoviesList() {
+var MoviesListComponent = (function () {
+    function MoviesListComponent() {
     }
-    MoviesList = __decorate([
+    MoviesListComponent = __decorate([
         core_1.Component({
             selector: 'movies-list',
             template: "\n\n<h2>Movies List</h2>\n<ul>\n    <li>Movie 1</li>\n    <li>Movie 2</li>\n    <li>Movie 3</li>\n</ul>\n"
         }), 
         __metadata('design:paramtypes', [])
-    ], MoviesList);
-    return MoviesList;
+    ], MoviesListComponent);
+    return MoviesListComponent;
 }());
-exports.MoviesList = MoviesList;
-//# sourceMappingURL=movies-list.js.map
+exports.MoviesListComponent = MoviesListComponent;
+//# sourceMappingURL=movies-list.component.js.map
