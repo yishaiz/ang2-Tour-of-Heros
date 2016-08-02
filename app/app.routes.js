@@ -5,10 +5,11 @@ var router_1 = require('@angular/router');
 var heroes_routes_1 = require('./heroes/heroes.routes');
 var movies_routes_1 = require('./movies/movies.routes');
 var admin_routes_1 = require('./admin/admin.routes');
+var authenticated_routes_1 = require('./authenticated/authenticated.routes');
 // import { ROUTER_DIRECTIVES} from '@angular/router';
 var routes = [
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent }
-].concat(heroes_routes_1.heroesRoutes, movies_routes_1.moviesRoutes, admin_routes_1.adminRoutes, [
+].concat(heroes_routes_1.heroesRoutes, movies_routes_1.moviesRoutes, admin_routes_1.adminRoutes, authenticated_routes_1.authenticatedRoutes, [
     { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
 ]);
 /*

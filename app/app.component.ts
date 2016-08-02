@@ -79,6 +79,7 @@ import {ROUTER_DIRECTIVES } from '@angular/router';
     <a routerLink="/movies/about" routerLinkActive="active">About Movies</a>
     <a routerLink="/xxxx" routerLinkActive="active">Not found page</a>
     <a routerLink="/admin" routerLinkActive="active">Admin</a>
+    <a routerLink="/authenticated" routerLinkActive="active">Authenticated</a>
 </nav>
 
 <!-- Routed views go here -->

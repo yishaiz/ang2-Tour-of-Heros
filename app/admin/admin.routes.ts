@@ -1,6 +1,6 @@
 import {RouterConfig} from '@angular/router';
 
-import { AdminComponent} from './admin.component';
+import {  AdminComponent} from './admin.component';
 
 
 export const adminRoutes:RouterConfig = [

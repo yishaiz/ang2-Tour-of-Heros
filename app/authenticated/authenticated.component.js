@@ -9,18 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AdminComponent = (function () {
-    function AdminComponent() {
+var AuthenticatedComponent = (function () {
+    function AuthenticatedComponent() {
     }
-    AdminComponent = __decorate([
+    AuthenticatedComponent = __decorate([
         core_1.Component({
-            selector: 'admin',
-            styles: ["\n    h3{\n        color:red;\n    }\n    "],
-            template: "\n\n<h2>Administrator Area</h2>\n<h3>\n    You should not be here\n</h3>\n"
+            selector: 'authenticated',
+            styles: ["\n    h3{\n        color:green;\n    }\n    "],
+            template: "\n\n<h2>Authenticated Area</h2>\n<h3>\n    Only logged in users should be here\n</h3>\n"
         }), 
         __metadata('design:paramtypes', [])
-    ], AdminComponent);
-    return AdminComponent;
+    ], AuthenticatedComponent);
+    return AuthenticatedComponent;
 }());
-exports.AdminComponent = AdminComponent;
-//# sourceMappingURL=admin.component.js.map
+exports.AuthenticatedComponent = AuthenticatedComponent;
+//# sourceMappingURL=authenticated.component.js.map
