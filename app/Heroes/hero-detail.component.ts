@@ -12,7 +12,7 @@ import {HeroService} from "./hero.service";
 `],
     template: `
   <div *ngIf="hero">
-    <h2>{{hero.name}} details!</h2>
+    <h2>{{hero.name | uppercase}} details!</h2>
     <div><label>id: </label>{{hero.id}}</div>
     <div>
       <label>name: </label>
@@ -21,6 +21,11 @@ import {HeroService} from "./hero.service";
   </div>
   
   <button (click) = "returnToHeroesList()">Return to Heroes</button>
+  
+  
+  <br/>
+  
+  <button (click) = "goBack()">Go Back</button>
 `
 })
 
@@ -70,6 +75,10 @@ export class HeroDetailComponent implements OnInit , OnDestroy{
 
     returnToHeroesList(){
         this.router.navigate(['/heroes']);
+    }
+
+    goBack(){
+        window.history.back();
     }
 
 }
