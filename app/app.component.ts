@@ -80,6 +80,9 @@ import {ROUTER_DIRECTIVES } from '@angular/router';
     <a routerLink="/xxxx" routerLinkActive="active">Not found page</a>
     <a routerLink="/admin" routerLinkActive="active">Admin</a>
     <a routerLink="/authenticated" routerLinkActive="active">Authenticated</a>
+    <a routerLink="/hero-birthday" routerLinkActive="active">Pipe - hero-birthday</a>
+    
+    
 </nav>
 
 <!-- Routed views go here -->

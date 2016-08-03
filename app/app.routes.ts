@@ -6,7 +6,10 @@ import {provideRouter, RouterConfig} from '@angular/router';
 import {heroesRoutes} from './heroes/heroes.routes';
 import {moviesRoutes} from './movies/movies.routes';
 import {adminRoutes} from './admin/admin.routes';
+import { pipesRoutes} from './Pipes/pipes.routes';
 import {authenticatedRoutes} from './authenticated/authenticated.routes';
+
+
 import {LoginComponent} from './Login/login.component';
 
 // import { ROUTER_DIRECTIVES} from '@angular/router';
@@ -18,6 +21,7 @@ const routes:RouterConfig = [
     ...moviesRoutes,
     ...adminRoutes,
     ...authenticatedRoutes,
+    ...pipesRoutes,
     {path: '**', component: PageNotFoundComponent}
 ];
 
