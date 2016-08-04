@@ -44,5 +44,5 @@ export class HeroBirthdayComponent {
         date: new Date(1988, 3, 15)
     }
 
-    birthday22 = null;//new Date(1988, 3, 15); // April 15, 1988
+    birthday22 : any = null;//new Date(1988, 3, 15); // April 15, 1988
 }
