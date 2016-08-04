@@ -5,11 +5,13 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {HeroService} from "./hero.service";
 
 @Component({
+    moduleId:module.id,
     selector: 'my-hero-detail',
     providers: [HeroService],
-    styles: [` 
+    styleUrls:['hero-detail.component.css'],
+   /* styles: [`
          button{margin-top: 40px;}
-`],
+`],*/
     template: `
   <div *ngIf="hero">
     <h2>{{hero.name | uppercase}} details!</h2>
