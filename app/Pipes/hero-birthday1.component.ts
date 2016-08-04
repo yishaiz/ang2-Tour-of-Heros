@@ -1,7 +1,9 @@
 import {Component} from '@angular/core';
+import {MultiNumber} from './multi.pipe';
 
 @Component({
     selector: 'hero-birthday',
+    pipes:[MultiNumber],
     styles: [`
     h3{
         color:green;
@@ -33,6 +35,12 @@ json: {{myHero | json}}
 <h2>more samples</h2>
 dd/MM/yy
  <div>{{ birthday | date : 'dd/MM/yy'}}</div>
+
+
+<hr/>
+custom pipe - multi 
+ <h3>multi 10</h3>  
+ {{10 | multiPipe }}
 
 `
 })
