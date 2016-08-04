@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var hero_detail_component_1 = require('./hero-detail.component');
 var hero_service_1 = require('./hero.service');
+var hero_orderby_name_pipe_1 = require('../Pipes/hero.orderby.name.pipe');
 var router_1 = require('@angular/router');
 var HeroesOrderByComponent = (function () {
     function HeroesOrderByComponent(router, heroesService) {
@@ -32,11 +33,12 @@ var HeroesOrderByComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-heroes',
+            pipes: [hero_orderby_name_pipe_1.OrderByPipe],
             directives: [hero_detail_component_1.HeroDetailComponent],
             providers: [hero_service_1.HeroService],
             styleUrls: ['heroes.style.css'],
             // styleUrls: ['/app/Heroes/heros.style.css'],
-            template: "\n    \n<h2>My Heroes</h2>\n<ul class=\"heroes\">\n    <li *ngFor=\"let hero of heroes; trackBy:hero?.id\"\n        (click)=\"onSelect(hero)\">\n         \n        <span class=\"badge\">{{hero.id}}</span>{{hero.name}}\n    </li>        \n</ul>\n \n\n"
+            template: "\n    \n<h2>My Heroes - using orderBy</h2>\n<ul class=\"heroes\">\n    <!--<li *ngFor=\"let hero of heroes | orderby: '!name'; trackBy:hero?.id\"-->\n    <li *ngFor=\"let hero of heroes | orderby: 'name'; trackBy:hero?.id\"\n        (click)=\"onSelect(hero)\">\n         \n        <span class=\"badge\">{{hero.id}}</span>{{hero.name}}\n    </li>        \n</ul>\n \n\n"
         }), 
         __metadata('design:paramtypes', [router_1.Router, hero_service_1.HeroService])
     ], HeroesOrderByComponent);

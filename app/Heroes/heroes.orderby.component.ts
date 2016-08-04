@@ -3,20 +3,24 @@ import {Hero} from './Hero';
 import {HeroDetailComponent} from './hero-detail.component';
 import {HeroService} from './hero.service';
 
+import { OrderByPipe} from '../Pipes/hero.orderby.name.pipe';
+
 import {Router} from '@angular/router';
 
 @Component({
     moduleId: module.id,
     selector: 'my-heroes',
+        pipes:[OrderByPipe],
     directives: [HeroDetailComponent],
     providers: [HeroService],
     styleUrls: ['heroes.style.css'],
     // styleUrls: ['/app/Heroes/heros.style.css'],
     template: `
     
-<h2>My Heroes</h2>
+<h2>My Heroes - using orderBy</h2>
 <ul class="heroes">
-    <li *ngFor="let hero of heroes; trackBy:hero?.id"
+    <!--<li *ngFor="let hero of heroes | orderby: '!name'; trackBy:hero?.id"-->
+    <li *ngFor="let hero of heroes | orderby: 'name'; trackBy:hero?.id"
         (click)="onSelect(hero)">
          
         <span class="badge">{{hero.id}}</span>{{hero.name}}
