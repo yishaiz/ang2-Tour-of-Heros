@@ -81,6 +81,7 @@ import {ROUTER_DIRECTIVES } from '@angular/router';
     <a routerLink="/admin" routerLinkActive="active">Admin</a>
     <a routerLink="/authenticated" routerLinkActive="active">Authenticated</a>
     <a routerLink="/hero-birthday" routerLinkActive="active">Pipe - hero-birthday</a>
+    <a routerLink="/heroes-orderby" routerLinkActive="active">Pipe - hero - order-by</a>
     
     
 </nav>
